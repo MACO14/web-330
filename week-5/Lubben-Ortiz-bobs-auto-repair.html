@@ -1,0 +1,136 @@
+<!--
+    =====================================
+    ; Title: index.html
+    ; Author: Mackenzie Lubben-Ortiz
+    ; Date: 11/18/2023
+    ; Description: Bob's Automotive Repair Shop
+    ;=====================================
+    */
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WEB 330 - Enterprise JavaScript II</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../week-5/Lubben-Ortiz-bobs-auto-repair.css"
+    />
+
+
+    <!--Styling fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="assign-container">
+        <h1 class="app-header">Welcome to Bob's Automotive Repair Shop!</h1>
+       <!--Beginning of Product Listing-->
+       
+        <div id="form-example">
+            <div class="assign-content">
+              <div class="card-title">Product Listing</div>
+             
+              <div class="card-content">
+                <label for="productList" class="drop-down-menu">Choose a product:</label>
+                <select name="products" id="productList">
+                    <!--Product list options -->
+                    <option value="select">--Select--</option>
+                    <option value="19.99">Oil Change</option>
+                    <option value="18.44">Filter Replacement</option>
+                    <option value="9.99">Wiper Fluid Refill</option>
+                </select>
+                <i id="cart-message">To view your shopping cart click on the cart icon</i>
+                </form-field>
+            
+                <!--Cart button to add items to cart-->
+                <div class="form-field">
+                  <button class="btn btn-primary full-width" id="btnSearch">
+                    Add to Cart
+                  </button>
+                  <h1 id="res"></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="form-results-example">
+            <div class="assign-content">
+              <div class="card-content assign-results-text">Shopping Cart</div>
+              
+              <!--Table of product results-->
+             
+              <table header id="shoppingCart">
+                Name
+              </table>
+              <table data id="shoppingCart">
+                ID
+              </table>
+            </div>
+
+            <!--JavaScript code for counting products and adding to cart-->
+            <script type="module">
+                import { shoppingCart } from './shopping-cart.js';
+                import { product } from './product.js'
+
+                const shoppingCart = new ShoppingCart();
+
+                document.getElementById('btnAddProduct').onclick = function () {
+                    
+                    let productList = document.getElementById('productList').value
+
+                    const product = productList.options[productList.selectedIndex].text
+
+                   const productValue = productList.options[productList.selectedIndex].value
+                    
+                   if (text == value)
+                   system.out.println("<product> was added to your shopping cart!")
+                    console.log(newProduct)
+
+                    document.getElementById('cart-count').innerHTML = shoppingCart.count().toString()
+
+                    document.getElementById('txtProduct').value = ''
+
+                }
+                document.getElementById('btnAddProduct').onclick = function () {
+                    alert(JSON.stringify(shoppingCart.products))
+
+                    document.getElementById('btnEmpty').onclick = function() {
+                        shoppingCart.product = []
+                        document.getElementsById('cart-count').innerHTML = shoppingCart.count().toString()
+                    }
+
+                    const cartDisplayTable = ['id', 'name', 'price'];
+
+                    for(const element of cartDisplayTable) {
+                        console.log(element);
+                    }
+                }
+
+                document.getElementById('cart-count').innerHTML = shoppingCart.count().toString()
+                document.getElementById('txtProduct').value = ''
+            </script>
+         
+          </div>
+   <!--Return anchor tag with JavaScript-->
+   <a href="http://127.0.0.1:3000/week-1/index.html" class="return-home"
+   >Return</a
+ >
+
+  </body>
+</html>
+
+
+
+
+
