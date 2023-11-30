@@ -1,0 +1,172 @@
+<!--
+  Title: Lubben-Ortiz-future-value.html
+  Author: Mackenzie Lubben-Ortiz
+  Date: 11/29/2023
+  Description: Future Value App
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WEB 330 Enterprise JavaScript II</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="/week-1/site.css" />
+    <!-- This is a file reference to the theme.css file that you will be creating throughout the course -->
+    <link rel="stylesheet" type="text/css" href="/week-1/theme.css" />
+    <link rel="stylesheet" type="text/css" href="/week-6/flex-layout.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/week-6/Lubben-Ortiz-future-values.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/week-6/finance-calculator.js"></script>
+    <script src="/week-6/validator.js"></script>
+
+  </head>
+  <body class="light-theme">
+    <div class="assign-container">
+
+      <h1 class="form-label">Welcome to the Future Value App!</h1>
+       <!--Beginning of Product Listing-->
+
+      <div class="assign-content">
+        <div class="card-title">Future Value Calculator</div>
+        <div class="card-content">
+          <input class="form" />
+          <label for="txtMonthlyPayment">Monthly Payment:</label>
+          <script>
+            // adding input code from JS
+            let monthlyPayment = txtMonthlyPayment
+            let rate = txtYearlyRate
+            let years = listNumOfYears
+            let errorLogEl = errorLogEl
+
+            class Validator {
+              constructor() {
+                this.monthlyPayment = new monthlyPayment
+              }
+            }
+
+            validator = new monthlyPaymentValidator(monthlyPayment, rate, years);
+          
+            
+
+            func.call(monthlyPaymentValidator) 
+              function addRequiredField(monthlyPaymentValidator) {
+              console.log('Interest Rate is a required field,', 'Monthly Payment is a required field');
+              addRequiredField.required = true;
+            }
+            function addRequiredFloatField(monthlyPaymentValidator) {
+              console.log('Monthly Payment must be a float value', 'You entered asdf.');
+              addRequiredField.required = true;
+            }
+
+            function addFloatMinField(monthlyPaymentValidator) {
+              math.min(100);
+            }
+
+            function addFloatMaxField(monthlyPaymentValidator) {
+              math.max(100);
+            }
+
+            let errorLog = [''];
+
+            if(!monthlyPaymentValidator.validate()) {
+              for(let msg of monthlyPaymentValidator.messages)
+            {
+              errorLog.push(msg);
+            }
+          }
+
+          if(!rateValidator.validate()) {
+            for(let msg of rateValidator.messages)
+            {
+              errorLog.push(msg);
+            }
+          }
+
+          function validation () {
+            // Perform input validation
+            // if true:
+            clear(errorLogEl.innerHTML);
+            let futureValue = futureValue.display.bind(futureValue);
+            
+            // error message = "";
+            clear(errorLogEl.innerHTML);
+            let errorLogMessage = monthlyPaymentValidator();
+            if(document.getElementById(monthlyPayment.value > 1)) {
+              errorLogMessage[0] = "Monthly Payment is a required field!"
+            if(document.getElementById(rate.value > 0)) {
+              errorLogMessage[1] = "Interest Rate is a required field!" 
+
+            errorLogMessage.display.bind(errorLogEl.innerHTML);
+            
+            }
+            }
+            
+
+          } 
+          
+          </script>
+
+
+          <div class="card-content">
+            <input class="form" />
+            <label for="txtYearlyRate">Interest Rate:</label>
+
+            <span id="danger"
+            >Enter 11.1% as 11.1</span
+          >
+
+          
+          <label class="listNumOfYears">Number of Years:</label>
+          <select class="drop-down-menu">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+
+</select>
+
+      <div class="form-field">
+        <button class="btn btn-primary full-width" onclick="functionToExecute()">Calculate</button>
+      </div>
+
+      <div class="assign-container">
+        <div class="assign-content">
+          <div class="card">
+            <div class="card-title">Calculation as of <span id="today"></span>
+            <script>
+              let currentDate = new Date().toLocalDateString("en-US");
+              console.log(date);
+            </script>
+            </div>
+            <div class="card-content assign-results-text" id="futureValue"></div>
+          </div>
+        </div>
+      </div>
+      
+  
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
