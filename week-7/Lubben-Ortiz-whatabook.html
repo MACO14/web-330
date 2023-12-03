@@ -1,0 +1,221 @@
+<!--
+  Title: Lubben-Ortiz-whatabook.html
+  Author: Mackenzie Lubben-Ortiz
+  Date: 12/2/2023
+  Description: WhatABook, Part 1
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WEB 330 Enterprise JavaScript II</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="/week-1/site.css" />
+    <!-- This is a file reference to the theme.css file that you will be creating throughout the course -->
+    <link rel="stylesheet" type="text/css" href="/week-1/theme.css" />
+
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body class="light-theme">
+    <div class="assign-container">
+
+      <h1 class="form-label">Welcome to the WhatABook, Part 1 App!</h1>
+       <!--Beginning of Book Listing-->
+
+      <div class="assign-content">
+        <div class="card-title">Book Listing</div>
+        <div class="card-content" id="bookList">
+        <table border="1"> 
+            <tr>
+                <td>ISBN</td>
+                <td>Title</td>
+                <td>Description</td>
+                <td>Pages</td>
+                <td>Authors</td>
+            </tr>
+            <td>9780345339683</td>
+            <td>The Hobbit or There and Back Again</td>
+            <td>N/A</td>
+            <td>287</td>
+            <td>J.R.R. Tolkien</td>
+            <tr>
+                <td>9780261103573</td>
+                <td>The Fellowship of the Ring</td>
+                <td>First Part of the Lord of the Rings</td>
+                <td>416</td>
+                <td>J.R.R. Tolkien</td>
+            </tr>
+            <tr>
+                <td>9780261102631</td>
+                <td>The Two Towers</td>
+                <td>Second Part of the Lord of the Rings</td>
+                <td>442</td>
+                <td>J.R.R. Tolkien</td>
+            </tr>
+            <tr>
+                <td>9780261102378</td>
+                <td>The Return of the King</td>
+                <td>Third Part of the Lord of the Rings</td>
+                <td>556</td>
+                <td>J.R.R. Tolkien</td>
+            </tr>
+            <tr>
+                <td>9780593099322</td>
+                <td>Dune: Deluxe Edition</td>
+                <td>N/A</td>
+                <td>688</td>
+                <td>Frank Herbert</td>
+            </tr>
+            <tr>
+                <td>9780316769532</td>
+                <td>The Catcher and the Rye</td>
+                <td>N/A</td>
+                <td>277</td>
+                <td>J.D. Salinger</td>
+            </tr>
+
+    
+
+        </table>
+
+   
+
+      <div class="assign-container">
+        <div class="assign-content">
+          <div class="card">
+            <div class="card-title">Selected Book</div>
+            </div>
+            <div class="card-content assign-results-text" id="SelectedBook">
+                <script>document.getElementById("SelectedBook").addEventListener("click", displayBook);
+                
+                let fileName = "books.xml";
+                fetch(fileName)
+                .then(res => res.text())
+                .then(data => {
+                    let domParser = new domParser();
+                    let xmlBooks = parser.parseFromString(domParser, "text/xml");
+                })
+                   function laodBooks() {
+                        let xmlBooks = "books.xml";
+                        console.log(xmlBooks);
+                   }
+                   function addIsbnClickEvents() {
+                    document.getElementById("SelectedBook").addEventListener("click");
+                   
+                    function laodBooks(xml) {
+
+                    }};
+
+                    let books = function (xmlBooks) {
+                      return xml.getElementsByTagName("book");
+                    }
+
+                    let tableData = document.createElement("HEADER");
+
+                    function makeTable() {
+                      // header
+                      let header = document.createElement('h1');
+                      header.appendChild("Book Listing");
+                      return header;
+                    }
+
+                    function makeUL(array) {
+                      // list of elements
+                      let bookList = document.createElement('ul');
+
+                      for(let i = 0; i < array.length; i++) {
+                        // list items
+                        let items = document.createElement('li');
+
+                        // contents
+
+                        item.appendChild(document.createTextNode(array[i]));
+
+                        // add to the list
+                        list.appendChild(item);
+                      }
+
+                        // return constructed list
+                        return list;
+                    }
+
+                    document.getElementById('foo').appendChild(makeh1());
+                    document.getElementById('foo').appendChild(makeUL(options[0].set));
+
+                    for(let book of books)
+                    {
+                      let isbn = books.getElementByTagName('isbn')[0].childNodes[0].nodeValue;
+                      let title = books.getElementByTagName('title')[0].childNodes[0].nodeValue;
+                      let description = books.getElementByTagName('description')[0].childNodes.nodeValue;
+                      let pages = books.getElementByTagName('pages')[0].childNodes.nodeValue;
+                      let authors = books.getElementByTagName('authors')[0].childNodes.nodeValue;
+                    
+                      tableData = <tr><td data-value = "ISBN"><a href = "#" class= "isbn-link">${isbn}</a></td><td data-value="Title">${title}</td><td data-value= "Description">${description}</td><td data-value= "Pages">${pages}</td><td data-value= "Authors">${authors}</td></tr>
+                }
+                    document.getElementById("bookList").innerHTML;
+
+                    function anchorClicked(e)
+                     {
+                      e.preventDefault();
+
+                      let self = this;
+                      let cell = self.parentElement;
+                      let row = cell.parentElement; 
+                     }
+
+                      let data = row.querySelectorAll("td");
+
+                      const bookListing = ['Book1', 'Book2', 'Book3', 'Book4', 'Book5', 'Book6'];
+                      // unordered list
+                      var list = document.createElement('ul');
+                      // list item for each book and append it to the list
+                      books.forEach(function (book) {
+                        var li = document.createElement('li');
+                        li.field = book;
+                        list.appendChild(li);
+
+                        var app = document.querySelector('#app');
+                        app.appendChild(list);
+                      }
+                      
+                      
+                      );
+                      
+
+                  let bookData = document.selectBook.innerHTML;
+
+                  function addIsbnClickEvents() {
+                    let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
+
+                  };
+
+                  viewButtons[index].addEventListener("click", anchorClicked);
+                   
+                
+                </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!--Return anchor tag with JavaScript-->
+    <a href="http://127.0.0.1:3000/week-1/index.html" class="return-home"
+    >Return</a
+  >
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
